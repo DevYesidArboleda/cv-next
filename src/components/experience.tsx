@@ -2,27 +2,83 @@ export function Experience() {
   const experiences = [
     {
       year: "2024 — PRESENTE",
-      title: "Desarrollador Full Stack",
-      company: "Tu Empresa",
+      title: 'Desarrollador Vtex IO',
+      company:'Balloom Group',
       description:
-        "Desarrollo y mantenimiento de aplicaciones web modernas utilizando React, Next.js y Node.js. Implementación de mejores prácticas de accesibilidad y rendimiento.",
-      tags: ["React", "Next.js", "TypeScript", "Node.js"],
+        'Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación',
+      tags: ["React", "Vtex", "TypeScript", "Node.js"],
     },
     {
       year: "2022 — 2024",
       title: "Desarrollador Frontend",
-      company: "Empresa Anterior",
+      company: "Dropi",
       description:
-        "Creación de interfaces de usuario responsivas y accesibles. Colaboración con equipos de diseño para implementar sistemas de diseño escalables.",
-      tags: ["React", "JavaScript", "CSS", "Figma"],
+        "Desarrollo de aplicaciones web utilizando React (Next.js) y Node.js",
+      tags: ["React", "JavaScript", "CSS", "Figma", "Next"],
     },
     {
-      year: "2020 — 2022",
-      title: "Desarrollador Junior",
-      company: "Primera Empresa",
+      year: "2022-2023",
+      title: 'Desarrollador Vtex IO',
+      company:'Balloom Group',
+      description:
+        'Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación',
+      tags: ["React", "Vtex", "TypeScript", "Node.js"],
+    },
+    {
+      year: "2022",
+      title: "Desarrollador Vtex IO",
+      company: "Xtrategik",
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
-      tags: ["HTML", "CSS", "JavaScript", "Git"],
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2021 — 2022",
+      title: "Desarrollador Vtex IO",
+      company: "Summa Solution",
+      description:
+        "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2021 ",
+      title: "Desarrollador Vtex IO",
+      company: "Jumo Digital",
+      description:
+        "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2021 — 2022",
+      title: "Desarrollador Vtex IO",
+      company: "Summa Solution",
+      description:
+        "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2021 — 2022",
+      title: "Desarrollador de software",
+      company: "DevbotStudio S.A.S",
+      description:
+        'Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software',
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2020 — 2021",
+      title: "Desarrollador de software",
+      company: "Intelecto S.A.S",
+      description:
+        'Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software',
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
+    },
+    {
+      year: "2018 — 2020",
+      title: "Consultor Sistemas",
+      company: "MasterTics S.A.S",
+      description:
+        "Desarrollo de aplicativos web con WordPress, Manejo de servidores en la nube y físicos Linux y Mantenimiento e instalación de bases de datos",
+      tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
     },
   ]
 
