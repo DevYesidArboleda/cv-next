@@ -9,7 +9,7 @@ export function Hero() {
   const [isDeleting, setIsDeleting] = useState(false)
 
   const lines = [
-    "> Hola! soy Tu Nombre_",
+    "> Hola! soy Yesid Banguera",
     "> Desarrollador Full Stack_",
     "> Creando experiencias web únicas_",
     "> Transformando ideas en código_",
