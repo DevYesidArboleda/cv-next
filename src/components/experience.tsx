@@ -9,7 +9,7 @@ export function Experience() {
       tags: ["React", "Vtex", "TypeScript", "Node.js"],
     },
     {
-      year: "2022 — 2024",
+      year: "2023 — 2024",
       title: "Desarrollador Frontend",
       company: "Dropi",
       description:
@@ -43,7 +43,7 @@ export function Experience() {
     {
       year: "2021 ",
       title: "Desarrollador Vtex IO",
-      company: "Jumo Digital",
+      company: "Jump Digital",
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       tags: ["Vtex", "HTML", "CSS", "JavaScript", "Git"],
