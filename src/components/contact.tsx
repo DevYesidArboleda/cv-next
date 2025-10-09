@@ -24,14 +24,29 @@ export function Contact() {
   }
 
   const socials = [
-    { icon: Github, label: "GitHub", href: "https://github.com/DevYesidArboleda" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/yesid-banguera-arboleda-042280167/" },
-    { icon: Mail, label: "Email", href: "mailto:yesison714@gmail.com" },
-    { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/3162115964" }, 
+    {
+      icon: Github,
+      label: "GitHub",
+      href: "https://github.com/DevYesidArboleda",
+      color: "hover:bg-slate-500/10 hover:border-slate-500",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/yesid-banguera-arboleda-042280167/",
+      color: "hover:bg-blue-500/10 hover:border-blue-500",
+    },
+    { icon: Mail, label: "Email", href: "mailto:yesison714@gmail.com", color: "hover:bg-red-500/10 hover:border-red-500" },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      href: "https://wa.me/3162115964",
+      color: "hover:bg-green-500/10 hover:border-green-500",
+    },
   ]
 
   return (
-    <section id="contact" className="min-h-screen flex items-center px-6 py-20">
+    <section id="contact" className="min-h-screen flex items-center px-6 py-12">
       <div className="max-w-4xl mx-auto w-full">
         <div className="space-y-12">
           <div>
@@ -43,7 +58,10 @@ export function Contact() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 max-w-2xl p-8 rounded-lg bg-gradient-to-br from-primary/5 to-primary/10 border border-border"
+          >
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-mono text-muted-foreground">
@@ -56,7 +74,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="bg-card border-border focus:border-primary"
+                  className="bg-background border-border focus:border-primary focus:ring-primary/20"
                 />
               </div>
               <div className="space-y-2">
@@ -70,7 +88,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="bg-card border-border focus:border-primary"
+                  className="bg-background border-border focus:border-primary focus:ring-primary/20"
                 />
               </div>
             </div>
@@ -81,10 +99,10 @@ export function Contact() {
               <Input
                 id="phone"
                 type="tel"
-                placeholder="+57 313 343..."
+                placeholder="+1 234 567 8900"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="bg-card border-border focus:border-primary"
+                className="bg-background border-border focus:border-primary focus:ring-primary/20"
               />
             </div>
             <div className="space-y-2">
@@ -98,10 +116,13 @@ export function Contact() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={6}
-                className="bg-card border-border focus:border-primary resize-none"
+                className="bg-background border-border focus:border-primary focus:ring-primary/20 resize-none"
               />
             </div>
-            <Button type="submit" className="gap-2">
+            <Button
+              type="submit"
+              className="gap-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
+            >
               Enviar mensaje
               <Send className="w-4 h-4" />
             </Button>
@@ -114,7 +135,7 @@ export function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary hover:bg-muted/50 transition-all group"
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-border ${social.color} transition-all group`}
               >
                 <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 <span className="text-sm font-medium">{social.label}</span>

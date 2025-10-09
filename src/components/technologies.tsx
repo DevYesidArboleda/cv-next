@@ -67,20 +67,20 @@ export function Technologies() {
   ]
 
   return (
-    <section id="technologies" className="min-h-screen flex items-center px-6 py-20">
+    <section id="technologies" className="min-h-screen flex items-center px-6 py-12">
       <div className="max-w-4xl mx-auto w-full">
         <h2 className="text-sm font-mono text-muted-foreground mb-12 uppercase tracking-wider">Tecnologías</h2>
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-muted/50 transition-all"
+              className="group flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 transition-all hover:scale-110"
             >
               <div className="w-16 h-16 flex items-center justify-center">
                 <img
                   src={tech.icon || "/placeholder.svg"}
                   alt={tech.name}
-                  className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all"
+                  className="w-full h-full object-contain transition-transform group-hover:scale-110"
                 />
               </div>
               <span className="text-xs font-mono text-muted-foreground group-hover:text-primary transition-colors text-center">
