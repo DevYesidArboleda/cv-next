@@ -20,7 +20,7 @@ export function About() {
               </p>
             </div>
             <div className="mt-8 p-6 rounded-lg border border-border bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
-              <img src="/developer-working-on-laptop-with-code-on-screen.jpg" alt="Developer workspace" className="w-full h-auto rounded-lg" />
+              <img src="/profilepic.png" alt="Developer workspace" className="w-full h-auto rounded-lg" />
             </div>
           </div>
 
@@ -32,11 +32,11 @@ export function About() {
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
                     <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg"
                       alt="Vtex"
                       className="w-5 h-5"
                     />
-                    <span className="text-sm font-mono">React</span>
+                    <span className="text-sm font-mono">Vtex</span>
                   </div>
                   <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
                     <img
