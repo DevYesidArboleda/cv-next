@@ -114,7 +114,7 @@ export function Projects() {
   return (
     <section id="projects" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-sm font-mono text-muted-foreground mb-12 uppercase tracking-wider">Proyectos Destacados</h2>
+        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">Proyectos Destacados</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <button

@@ -4,7 +4,7 @@ export function About() {
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <h2 className="text-sm font-mono text-muted-foreground mb-6 uppercase tracking-wider">Sobre mí</h2>
+            <h2 className="text-3xl font-bold text-muted-foreground mb-6 uppercase tracking-wider ">Sobre mí</h2>
             <div className="space-y-6 text-lg leading-relaxed font-mono">
               <p>
                 Soy un desarrollador apasionado por crear interfaces de usuario accesibles y pixel-perfect que combinan
@@ -25,7 +25,7 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="text-sm font-mono text-muted-foreground mb-6 uppercase tracking-wider">Habilidades</h3>
+            <h3 className="text-2xl font-mono text-muted-foreground mb-6 uppercase tracking-wider md:text-2xl md:font-bold">Habilidades</h3>
             <div className="space-y-8">
               <div>
                 <h4 className="text-base font-medium mb-3 font-mono">Frontend</h4>

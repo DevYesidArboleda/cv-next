@@ -164,7 +164,7 @@ export function Experience() {
   return (
     <section id="experience" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-4xl mx-auto w-full">
-        <h2 className="text-sm font-mono text-muted-foreground mb-12 uppercase tracking-wider">Experiencia</h2>
+        <h2 className="text-2xl font-bold  font-mono text-muted-foreground mb-12 uppercase tracking-wider">Experiencia</h2>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div

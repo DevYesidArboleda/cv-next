@@ -69,7 +69,7 @@ export function Technologies() {
   return (
     <section id="technologies" className="min-h-screen flex items-center px-6 py-12">
       <div className="max-w-4xl mx-auto w-full">
-        <h2 className="text-sm font-mono text-muted-foreground mb-12 uppercase tracking-wider">Tecnologías</h2>
+        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">Tecnologías</h2>
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {technologies.map((tech, index) => (
             <div

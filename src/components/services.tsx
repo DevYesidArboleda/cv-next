@@ -70,7 +70,7 @@ export function Services() {
   return (
     <section id="services" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-4xl mx-auto w-full">
-        <h2 className="text-sm font-mono text-muted-foreground mb-12 uppercase tracking-wider">Servicios</h2>
+        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">Servicios</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div

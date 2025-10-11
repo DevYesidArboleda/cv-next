@@ -50,7 +50,7 @@ export function Contact() {
       <div className="max-w-4xl mx-auto w-full">
         <div className="space-y-12">
           <div>
-            <h2 className="text-sm font-mono text-muted-foreground mb-6 uppercase tracking-wider">Contacto</h2>
+            <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-6 uppercase tracking-wider">Contacto</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-balance mb-6">Trabajemos juntos</h3>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
               Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o
