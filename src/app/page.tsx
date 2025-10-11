@@ -8,6 +8,7 @@ import { Contact } from "@/components/contact"
 import { Navigation } from "@/components/navigation"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { AnimatedBackground } from "@/components/animated-background"
+import { BackToTop } from "@/components/back-to-top"
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <WhatsAppButton />
+      <BackToTop />
     </div>
   )
 }

@@ -12,7 +12,7 @@ export function Experience() {
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         {
           name: "TypeScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -45,7 +45,7 @@ export function Experience() {
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         {
           name: "TypeScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
@@ -61,7 +61,7 @@ export function Experience() {
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       tags: [
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -79,7 +79,7 @@ export function Experience() {
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       tags: [
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -97,7 +97,7 @@ export function Experience() {
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       tags: [
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -114,7 +114,7 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
       tags: [
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -131,7 +131,7 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
       tags: [
-        { name: "Vtex", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg" },
+        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {

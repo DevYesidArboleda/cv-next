@@ -32,7 +32,7 @@ export function About() {
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
                     <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg"
+                      src="https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg"
                       alt="Vtex"
                       className="w-5 h-5"
                     />

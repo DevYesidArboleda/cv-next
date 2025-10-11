@@ -50,7 +50,7 @@ export function Technologies() {
     },
     {
       name: "VTEX",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vtex/vtex-original.svg",
+      icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg",
     },
     {
       name: "WordPress",
