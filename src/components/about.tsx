@@ -5,19 +5,13 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <h2 className="text-3xl font-bold text-muted-foreground mb-6 uppercase tracking-wider ">Sobre mí</h2>
-            <div className="space-y-6 text-lg leading-relaxed font-mono">
-              <p>
-                Soy un desarrollador apasionado por crear interfaces de usuario accesibles y pixel-perfect que combinan
-                diseño reflexivo con ingeniería robusta.
+            <div className="space-y-6 text-lg leading-relaxed font-mono text-justify">
+              <p >
+                Soy un desarrollador full-stack que encuentra su pasión en la intersección entre el diseño y la ingeniería. Me especializo en traducir visiones de diseño en interfaces de usuario accesibles y pixel-perfect, respaldadas por una arquitectura robusta y de alto rendimiento. Mi objetivo es construir experiencias digitales que no solo sean visualmente impresionantes, sino también funcionales, usables y meticulosamente construidas.
               </p>
               <p>
-                Mi trabajo favorito se encuentra en la intersección del diseño y el desarrollo, creando experiencias que
-                no solo se ven bien, sino que están meticulosamente construidas para el rendimiento y la usabilidad.
-              </p>
-              <p className="text-muted-foreground">
-                Actualmente trabajo como <span className="text-foreground font-medium">Desarrollador Full Stack</span>,
-                especializándome en tecnologías web modernas y mejores prácticas de desarrollo.
-              </p>
+                Como desarrollador full-stack, mi misión es construir puentes entre el diseño creativo y la solidez técnica. Me apasiona materializar experiencias de usuario que sean visualmente pulcras (pixel-perfect), inclusivas (accesibles) y ofrezcan un rendimiento óptimo. Cada línea de código que escribo tiene como objetivo no solo cumplir con las especificaciones, sino superar las expectativas de usabilidad y funcionalidad.
+              </p>              
             </div>
             <div className="mt-8 p-6 rounded-lg border border-border bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
               <img src="/profilepic.png" alt="Developer workspace" className="w-full h-auto rounded-lg" />
