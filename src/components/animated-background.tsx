@@ -12,6 +12,24 @@ export function AnimatedBackground() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    // Función para detectar el modo oscuro
+    const isDarkMode = () => {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+
+    // Colores basados en el modo
+    const getColors = () => {
+      return isDarkMode() ? {
+        grid: "rgba(6, 182, 212, 0.03)",
+        particles: "rgba(6, 182, 212, 0.4)",
+        connections: "rgba(6, 182, 212, 0.15)"
+      } : {
+        grid: "rgba(0, 0, 0, 0.03)",
+        particles: "rgba(0, 0, 0, 0.4)",
+        connections: "rgba(0, 0, 0, 0.15)"
+      }
+    }
+
     // Set canvas size
     const setCanvasSize = () => {
       canvas.width = window.innerWidth
@@ -45,8 +63,10 @@ export function AnimatedBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+      const colors = getColors()
+
       // Draw grid
-      ctx.strokeStyle = "rgba(6, 182, 212, 0.03)"
+      ctx.strokeStyle = colors.grid
       ctx.lineWidth = 1
       const gridSize = 50
 
@@ -74,7 +94,7 @@ export function AnimatedBackground() {
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
 
         // Draw particle
-        ctx.fillStyle = "rgba(6, 182, 212, 0.4)"
+        ctx.fillStyle = colors.particles
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
         ctx.fill()
@@ -86,7 +106,7 @@ export function AnimatedBackground() {
           const distance = Math.sqrt(dx * dx + dy * dy)
 
           if (distance < 150) {
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.15 * (1 - distance / 150)})`
+            ctx.strokeStyle = `${colors.connections.replace('0.15', (0.15 * (1 - distance / 150)).toString())}`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(particle.x, particle.y)
@@ -101,8 +121,16 @@ export function AnimatedBackground() {
 
     animate()
 
+    // Listener para cambios en el modo de color
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleColorSchemeChange = () => {
+    }
+    
+    mediaQuery.addEventListener('change', handleColorSchemeChange)
+
     return () => {
       window.removeEventListener("resize", setCanvasSize)
+      mediaQuery.removeEventListener('change', handleColorSchemeChange)
     }
   }, [])
 
