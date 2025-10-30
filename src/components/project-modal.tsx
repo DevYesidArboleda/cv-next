@@ -3,6 +3,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ExternalLink, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 interface ProjectModalProps {
   isOpen: boolean
@@ -10,6 +11,7 @@ interface ProjectModalProps {
   project: {
     title: string
     description: string
+    descriptionEn?: string
     tags: { name: string; icon: string }[]
     link: string
     preview: string
@@ -18,6 +20,8 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
+  const { language, t } = useLanguage()
+
   if (!project) return null
 
   return (
@@ -32,11 +36,13 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-primary hover:underline font-mono"
             >
-              Visitar sitio
+              {t("Visitar sitio", "Visit site")}
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
-          <p className="text-muted-foreground mt-2 font-mono text-sm">{project.description}</p>
+          <p className="text-muted-foreground mt-2 font-mono text-sm">
+            {language === "es" ? project.description : project.descriptionEn || project.description}
+          </p>
           <div className="flex flex-wrap gap-2 mt-3">
             {project.tags.map((tag) => (
               <div
@@ -58,11 +64,16 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
             />
             <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
               <AlertCircle className="w-4 h-4" />
-              <p>La vista previa en vivo no está disponible debido a restricciones de seguridad</p>
+              <p>
+                {t(
+                  "La vista previa en vivo no está disponible debido a restricciones de seguridad",
+                  "Live preview is not available due to security restrictions",
+                )}
+              </p>
             </div>
             <Button asChild size="lg" className="font-mono">
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                Abrir sitio en nueva pestaña
+                {t("Abrir sitio en nueva pestaña", "Open site in new tab")}
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>

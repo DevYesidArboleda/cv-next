@@ -1,15 +1,20 @@
 "use client"
 
-import company from "../../public/software-company-logo.png"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Experience() {
+  const { language, t } = useLanguage()
+
   const experiences = [
     {
       year: "2024 — PRESENTE",
+      yearEn: "2024 — PRESENT",
       title: "Desarrollador Vtex IO",
+      titleEn: "Vtex IO Developer",
       company: "Balloom Group",
       logo: "/software-company-logo.png",
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
+      descriptionEn: "Creation of custom components with React, Vtex IO front-end development and Layout",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
@@ -22,10 +27,13 @@ export function Experience() {
     },
     {
       year: "2023 — 2024",
+      yearEn: "2023 — 2024",
       title: "Desarrollador Frontend",
+      titleEn: "Frontend Developer",
       company: "Dropi",
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web utilizando React (Next.js) y Node.js",
+      descriptionEn: "Web application development using React (Next.js) and Node.js",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         {
@@ -39,10 +47,13 @@ export function Experience() {
     },
     {
       year: "2022-2023",
+      yearEn: "2022-2023",
       title: "Desarrollador Vtex IO",
+      titleEn: "Vtex IO Developer",
       company: "Balloom Group",
       logo: "/software-company-logo.png",
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
+      descriptionEn: "Creation of custom components with React, Vtex IO front-end development and Layout",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
@@ -55,11 +66,15 @@ export function Experience() {
     },
     {
       year: "2022",
+      yearEn: "2022",
       title: "Desarrollador Vtex IO",
+      titleEn: "Vtex IO Developer",
       company: "Xtrategik",
       logo: "/software-company-logo.png",
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      descriptionEn:
+        "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -73,11 +88,15 @@ export function Experience() {
     },
     {
       year: "2021 — 2022",
+      yearEn: "2021 — 2022",
       title: "Desarrollador Vtex IO",
+      titleEn: "Vtex IO Developer",
       company: "Summa Solution",
       logo: "/software-company-logo.png",
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      descriptionEn:
+        "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -91,11 +110,15 @@ export function Experience() {
     },
     {
       year: "2021",
+      yearEn: "2021",
       title: "Desarrollador Vtex IO",
+      titleEn: "Vtex IO Developer",
       company: "Jump Digital",
       logo: "/software-company-logo.png",
       description:
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
+      descriptionEn:
+        "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -109,10 +132,13 @@ export function Experience() {
     },
     {
       year: "2021 — 2022",
+      yearEn: "2021 — 2022",
       title: "Desarrollador de software",
+      titleEn: "Software Developer",
       company: "DevbotStudio S.A.S",
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
+      descriptionEn: "Web application development with JavaScript and software solutions implementation",
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -126,10 +152,13 @@ export function Experience() {
     },
     {
       year: "2020 — 2021",
+      yearEn: "2020 — 2021",
       title: "Desarrollador de software",
+      titleEn: "Software Developer",
       company: "Intelecto S.A.S",
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
+      descriptionEn: "Web application development with JavaScript and software solutions implementation",
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -143,11 +172,15 @@ export function Experience() {
     },
     {
       year: "2018 — 2020",
+      yearEn: "2018 — 2020",
       title: "Consultor Sistemas",
+      titleEn: "Systems Consultant",
       company: "MasterTics S.A.S",
       logo: "/software-company-logo.png",
       description:
         "Desarrollo de aplicativos web con WordPress, Manejo de servidores en la nube y físicos Linux y Mantenimiento e instalación de bases de datos",
+      descriptionEn:
+        "Web application development with WordPress, Cloud and physical Linux server management, and Database maintenance and installation",
       tags: [
         { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -164,7 +197,9 @@ export function Experience() {
   return (
     <section id="experience" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-4xl mx-auto w-full">
-        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">Experiencia</h2>
+        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">
+          {t("Experiencia", "Experience")}
+        </h2>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div
@@ -173,7 +208,7 @@ export function Experience() {
             >
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-background border-2 border-muted group-hover:border-primary transition-colors" />
               <div className="space-y-3">
-                <p className="text-xs font-mono text-muted-foreground">{exp.year}</p>
+                <p className="text-xs font-mono text-muted-foreground">{language === "es" ? exp.year : exp.yearEn}</p>
                 <div className="flex items-center gap-3">
                   <img
                     src={exp.logo || "/placeholder.svg"}
@@ -181,11 +216,13 @@ export function Experience() {
                     className="w-10 h-10 rounded-lg border border-border object-cover"
                   />
                   <div>
-                    <h3 className="text-xl font-semibold font-mono">{exp.title}</h3>
+                    <h3 className="text-xl font-semibold font-mono">{language === "es" ? exp.title : exp.titleEn}</h3>
                     <p className="text-primary font-mono text-sm">{exp.company}</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground leading-relaxed font-mono text-sm">{exp.description}</p>
+                <p className="text-muted-foreground leading-relaxed font-mono text-sm">
+                  {language === "es" ? exp.description : exp.descriptionEn}
+                </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {exp.tags.map((tag) => (
                     <div key={tag.name} className="flex items-center gap-1.5 px-2 py-1 bg-muted rounded">

@@ -1,17 +1,31 @@
+"use client"
+
+import { useLanguage } from "@/contexts/language-context"
+
 export function About() {
+  const { language, t } = useLanguage()
+
   return (
-    <section id="about" className="min-h-screen flex items-center px-6 py-20">
+    <section id="about" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <h2 className="text-3xl font-bold text-muted-foreground mb-6 uppercase tracking-wider ">Sobre mí</h2>
+            <h2 className="text-3xl font-bold text-muted-foreground mb-6 uppercase tracking-wider font-mono">
+              {t("Sobre mí", "About Me")}
+            </h2>
             <div className="space-y-6 text-lg leading-relaxed font-mono text-justify">
-              <p >
-                Soy un desarrollador full-stack que encuentra su pasión en la intersección entre el diseño y la ingeniería. Me especializo en traducir visiones de diseño en interfaces de usuario accesibles y pixel-perfect, respaldadas por una arquitectura robusta y de alto rendimiento. Mi objetivo es construir experiencias digitales que no solo sean visualmente impresionantes, sino también funcionales, usables y meticulosamente construidas.
+              <p>
+                {t(
+                  "Soy un desarrollador full-stack que encuentra su pasión en la intersección entre el diseño y la ingeniería. Me especializo en traducir visiones de diseño en interfaces de usuario accesibles y pixel-perfect, respaldadas por una arquitectura robusta y de alto rendimiento. Mi objetivo es construir experiencias digitales que no solo sean visualmente impresionantes, sino también funcionales, usables y meticulosamente construidas.",
+                  "I am a full-stack developer who finds passion at the intersection of design and engineering. I specialize in translating design visions into accessible and pixel-perfect user interfaces, backed by robust and high-performance architecture. My goal is to build digital experiences that are not only visually stunning, but also functional, usable, and meticulously crafted.",
+                )}
               </p>
               <p>
-                Como desarrollador full-stack, mi misión es construir puentes entre el diseño creativo y la solidez técnica. Me apasiona materializar experiencias de usuario que sean visualmente pulcras (pixel-perfect), inclusivas (accesibles) y ofrezcan un rendimiento óptimo. Cada línea de código que escribo tiene como objetivo no solo cumplir con las especificaciones, sino superar las expectativas de usabilidad y funcionalidad.
-              </p>              
+                {t(
+                  "Como desarrollador full-stack, mi misión es construir puentes entre el diseño creativo y la solidez técnica. Me apasiona materializar experiencias de usuario que sean visualmente pulcras (pixel-perfect), inclusivas (accesibles) y ofrezcan un rendimiento óptimo. Cada línea de código que escribo tiene como objetivo no solo cumplir con las especificaciones, sino superar las expectativas de usabilidad y funcionalidad.",
+                  "As a full-stack developer, my mission is to build bridges between creative design and technical solidity. I am passionate about materializing user experiences that are visually polished (pixel-perfect), inclusive (accessible), and offer optimal performance. Every line of code I write aims not only to meet specifications, but to exceed usability and functionality expectations.",
+                )}
+              </p>
             </div>
             <div className="mt-8 p-6 rounded-lg border border-border bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
               <img src="/profilepic.png" alt="Developer workspace" className="w-full h-auto rounded-lg" />
@@ -19,7 +33,9 @@ export function About() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-mono text-muted-foreground mb-6 uppercase tracking-wider md:text-2xl md:font-bold">Habilidades</h3>
+            <h3 className="text-2xl font-mono text-muted-foreground mb-6 uppercase tracking-wider md:text-2xl md:font-bold">
+              {t("Habilidades", "Skills")}
+            </h3>
             <div className="space-y-8">
               <div>
                 <h4 className="text-base font-medium mb-3 font-mono">Frontend</h4>
@@ -91,7 +107,7 @@ export function About() {
                 </div>
               </div>
               <div>
-                <h4 className="text-base font-medium mb-3 font-mono">Herramientas</h4>
+                <h4 className="text-base font-medium mb-3 font-mono">{t("Herramientas", "Tools")}</h4>
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
                     <img

@@ -1,8 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Navigation() {
+  const { language, t } = useLanguage()
   const [activeSection, setActiveSection] = useState("hero")
 
   useEffect(() => {
@@ -31,13 +33,13 @@ export function Navigation() {
   }
 
   const navItems = [
-    { id: "hero", label: "INICIO" },
-    { id: "about", label: "SOBRE MÍ" },
-    { id: "services", label: "SERVICIOS" },
-    { id: "technologies", label: "TECNOLOGÍAS" },
-    { id: "experience", label: "EXPERIENCIA" },
-    { id: "projects", label: "PROYECTOS" },
-    { id: "contact", label: "CONTACTO" },
+    { id: "hero", label: t("INICIO", "HOME") },
+    { id: "about", label: t("SOBRE MÍ", "ABOUT ME") },
+    { id: "services", label: t("SERVICIOS", "SERVICES") },
+    { id: "technologies", label: t("TECNOLOGÍAS", "TECHNOLOGIES") },
+    { id: "experience", label: t("EXPERIENCIA", "EXPERIENCE") },
+    { id: "projects", label: t("PROYECTOS", "PROJECTS") },
+    { id: "contact", label: t("CONTACTO", "CONTACT") },
   ]
 
   return (

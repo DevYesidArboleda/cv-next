@@ -3,8 +3,10 @@
 import { ArrowUpRight, Building2, Briefcase } from "lucide-react"
 import { useState } from "react"
 import { ProjectModal } from "./project-modal"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Projects() {
+  const { language, t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -13,6 +15,7 @@ export function Projects() {
       title: "Maidenform",
       company: "Balloon Group",
       description: "Plataforma de comercio electrónico realizada en vtex",
+      descriptionEn: "E-commerce platform built with vtex",
       image: "/Maidenform.png",
       tags: [
         {
@@ -39,13 +42,14 @@ export function Projects() {
       ],
       link: "https://www.maidenform.com.mx/",
       preview: "https://www.maidenform.com.mx/",
-      screenshot: "/portfolio-builder-templates.png",
+      screenshot: "/Maidenform.png",
       gradient: "from-cyan-500/10 to-blue-500/10",
     },
     {
       title: "Sportage",
       company: "Xtrategik S.A.S",
       description: "Plataforma de comercio electrónico realizada en vtex",
+      descriptionEn: "E-commerce platform built with vtex",
       image: "/Sportage.png",
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -73,13 +77,14 @@ export function Projects() {
       ],
       link: "https://www.sportagetienda.com/",
       preview: "https://www.sportagetienda.com/",
-      screenshot: "/portfolio-builder-templates.png",
+      screenshot: "/Sportage.png",
       gradient: "from-purple-500/10 to-pink-500/10",
     },
     {
       title: "Día Online",
       company: "Summa Solution",
       description: "Plataforma de comercio electrónico realizada en vtex",
+      descriptionEn: "E-commerce platform built with vtex",
       image: "/Dia.png",
       tags: [
         {
@@ -101,7 +106,7 @@ export function Projects() {
       ],
       link: "https://diaonline.supermercadosdia.com.ar/",
       preview: "https://diaonline.supermercadosdia.com.ar/",
-      screenshot: "/portfolio-builder-templates.png",
+      screenshot: "/Dia.png",
       gradient: "from-orange-500/10 to-red-500/10",
     },
   ]
@@ -114,7 +119,9 @@ export function Projects() {
   return (
     <section id="projects" className="min-h-screen flex items-center px-6 py-8 md:py-12">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">Proyectos Destacados</h2>
+        <h2 className="text-2xl font-bold font-mono text-muted-foreground mb-12 uppercase tracking-wider">
+          {t("Proyectos Destacados", "Featured Projects")}
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <button
@@ -142,7 +149,9 @@ export function Projects() {
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-sm font-mono">{project.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm font-mono">
+                  {language === "es" ? project.description : project.descriptionEn}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <div
@@ -164,10 +173,12 @@ export function Projects() {
             </div>
             <div className="space-y-2">
               <h3 className="text-3xl font-bold font-mono text-primary">+35</h3>
-              <p className="text-lg font-semibold font-mono">Proyectos Completados</p>
+              <p className="text-lg font-semibold font-mono">{t("Proyectos Completados", "Completed Projects")}</p>
               <p className="text-sm text-muted-foreground font-mono max-w-xs">
-                He colaborado en más de 35 proyectos en diferentes empresas, desarrollando soluciones de e-commerce y
-                aplicaciones web
+                {t(
+                  "He colaborado en más de 35 proyectos en diferentes empresas, desarrollando soluciones de e-commerce y aplicaciones web",
+                  "I have collaborated on more than 35 projects in different companies, developing e-commerce solutions and web applications",
+                )}
               </p>
             </div>
             <div className="flex flex-wrap gap-2 justify-center pt-2">
