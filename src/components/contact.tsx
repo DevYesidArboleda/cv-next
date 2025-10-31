@@ -142,13 +142,7 @@ export function Contact() {
             </form>
 
             
-          </div>
-
-          <div className="lg:hidden flex items-center justify-center">
-            <div className="relative w-48 animate-float">
-              <img src="/astronaut-floating-in-space.jpg" alt="Astronaut" className="w-full h-auto drop-shadow-2xl" />
-            </div>
-          </div>
+          </div>      
 
           <div className="flex flex-wrap gap-4">
             {socials.map((social) => (

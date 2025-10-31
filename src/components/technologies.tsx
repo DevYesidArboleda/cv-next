@@ -88,6 +88,10 @@ export function Technologies() {
       name: "GraphQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
     },
+    {
+      name: "Linux",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    },
   ]
 
   return (

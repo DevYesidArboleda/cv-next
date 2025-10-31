@@ -109,6 +109,64 @@ export function Projects() {
       screenshot: "/Dia.png",
       gradient: "from-orange-500/10 to-red-500/10",
     },
+    {
+      title: "berlei",
+      company: "Balloon Group",
+      description: "Plataforma de comercio electrónico realizada en vtex",
+      descriptionEn: "E-commerce platform built with vtex",
+      image: "/berlei.png",
+      tags: [
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "Tailwind",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "VTEX",
+          icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg",
+        },
+        {
+          name: "Git",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
+      ],
+      link: "https://diaonline.supermercadosdia.com.ar/",
+      preview: "https://diaonline.supermercadosdia.com.ar/",
+      screenshot: "/berlei.png",
+      gradient: "from-orange-500/10 to-red-500/10",
+    },
+    {
+      title: "Autocolombiana",
+      company: "Legger",
+      description: "Plataforma de comercio electrónico realizada en vtex",
+      descriptionEn: "E-commerce platform built with vtex",
+      image: "/autocolombiana.png",
+      tags: [
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        },
+        {
+          name: "Tailwind",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "VTEX",
+          icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg",
+        },
+        {
+          name: "Git",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
+      ],
+      link: "https://www.autocolombiana.com.co//",
+      preview: "https://www.autocolombiana.com.co//",
+      screenshot: "/autocolombiana.png",
+      gradient: "from-orange-500/10 to-red-500/10",
+    },
   ]
 
   const handleProjectClick = (index: number) => {

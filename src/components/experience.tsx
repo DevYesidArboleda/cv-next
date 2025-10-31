@@ -1,9 +1,12 @@
 "use client"
 
 import { useLanguage } from "@/contexts/language-context"
+import { ChevronDown } from "lucide-react"
+import { useState } from "react"
 
 export function Experience() {
   const { language, t } = useLanguage()
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const experiences = [
     {
@@ -15,6 +18,22 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
       descriptionEn: "Creation of custom components with React, Vtex IO front-end development and Layout",
+      responsibilities: [
+        "Creación de tiendas con VTEX IO (Home, PDP, PLP)",
+        "Desarrollo de componentes custom con React",
+        "Customización del checkout",
+        "Creación de servicios con Node.js, GraphQL y VTEX API",
+        "Implementación de hooks de VTEX",
+        "Desarrollo de Admin Apps y Pixel Apps",
+      ],
+      responsibilitiesEn: [
+        "Store creation with VTEX IO (Home, PDP, PLP)",
+        "Custom component development with React",
+        "Checkout customization",
+        "Service creation with Node.js, GraphQL and VTEX API",
+        "VTEX hooks implementation",
+        "Admin Apps and Pixel Apps development",
+      ],
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
@@ -23,6 +42,10 @@ export function Experience() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         },
         { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        {
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
       ],
     },
     {
@@ -34,6 +57,18 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web utilizando React (Next.js) y Node.js",
       descriptionEn: "Web application development using React (Next.js) and Node.js",
+      responsibilities: [
+        "Consumo de APIs REST y GraphQL",
+        "Creación de aplicaciones web con Next.js",
+        "Maquetación web responsive",
+        "Desarrollo de componentes reutilizables con React",
+      ],
+      responsibilitiesEn: [
+        "REST and GraphQL API consumption",
+        "Web application creation with Next.js",
+        "Responsive web layout",
+        "Reusable component development with React",
+      ],
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         {
@@ -54,6 +89,22 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Creación de componentes custom con React, Desarrollo front de Vtex IO y Maquetación",
       descriptionEn: "Creation of custom components with React, Vtex IO front-end development and Layout",
+      responsibilities: [
+        "Creación de tiendas con VTEX IO (Home, PDP, PLP)",
+        "Desarrollo de componentes custom con React",
+        "Customización del checkout",
+        "Creación de servicios con Node.js, GraphQL y VTEX API",
+        "Implementación de hooks de VTEX",
+        "Desarrollo de Admin Apps y Pixel Apps",
+      ],
+      responsibilitiesEn: [
+        "Store creation with VTEX IO (Home, PDP, PLP)",
+        "Custom component development with React",
+        "Checkout customization",
+        "Service creation with Node.js, GraphQL and VTEX API",
+        "VTEX hooks implementation",
+        "Admin Apps and Pixel Apps development",
+      ],
       tags: [
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
@@ -62,6 +113,10 @@ export function Experience() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         },
         { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        {
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
       ],
     },
     {
@@ -75,6 +130,18 @@ export function Experience() {
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       descriptionEn:
         "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
+      responsibilities: [
+        "Creación de tiendas con VTEX IO (Home, PDP, PLP)",
+        "Desarrollo de componentes custom con React",
+        "Customización del checkout",
+        "Creación de servicios con Node.js, GraphQL y VTEX API",
+      ],
+      responsibilitiesEn: [
+        "Store creation with VTEX IO (Home, PDP, PLP)",
+        "Custom component development with React",
+        "Checkout customization",
+        "Service creation with Node.js, GraphQL and VTEX API",
+      ],
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -84,6 +151,10 @@ export function Experience() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        {
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
       ],
     },
     {
@@ -97,6 +168,18 @@ export function Experience() {
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       descriptionEn:
         "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
+      responsibilities: [
+        "Creación de tiendas con VTEX IO (Home, PDP, PLP)",
+        "Desarrollo de componentes custom con React",
+        "Customización del checkout",
+        "Implementación de hooks de VTEX",
+      ],
+      responsibilitiesEn: [
+        "Store creation with VTEX IO (Home, PDP, PLP)",
+        "Custom component development with React",
+        "Checkout customization",
+        "VTEX hooks implementation",
+      ],
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -106,6 +189,10 @@ export function Experience() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        {
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
       ],
     },
     {
@@ -119,6 +206,16 @@ export function Experience() {
         "Desarrollo de componentes reutilizables y mantenimiento de aplicaciones web. Aprendizaje de mejores prácticas de desarrollo y trabajo en equipo.",
       descriptionEn:
         "Development of reusable components and web application maintenance. Learning development best practices and teamwork.",
+      responsibilities: [
+        "Creación de tiendas con VTEX IO (Home, PDP, PLP)",
+        "Desarrollo de componentes custom con React",
+        "Maquetación y estilos CSS",
+      ],
+      responsibilitiesEn: [
+        "Store creation with VTEX IO (Home, PDP, PLP)",
+        "Custom component development with React",
+        "Layout and CSS styling",
+      ],
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -128,6 +225,10 @@ export function Experience() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        {
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+        },
       ],
     },
     {
@@ -139,8 +240,26 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
       descriptionEn: "Web application development with JavaScript and software solutions implementation",
+      responsibilities: [
+        "Desarrollo de aplicaciones web con Angular",
+        "Desarrollo de backend con PHP y .NET",
+        "Creación de componentes custom",
+        "Implementación de componentes nativos con VTEX IO",
+      ],
+      responsibilitiesEn: [
+        "Web application development with Angular",
+        "Backend development with PHP and .NET",
+        "Custom component creation",
+        "Native component implementation with VTEX IO",
+      ],
       tags: [
         { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
+        {
+          name: "Angular",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        },
+        { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+        { name: ".NET", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -159,14 +278,26 @@ export function Experience() {
       logo: "/software-company-logo.png",
       description: "Desarrollo de aplicaciones web con JavaScript y implementación de soluciones de software",
       descriptionEn: "Web application development with JavaScript and software solutions implementation",
+      responsibilities: [
+        "Desarrollo web con JavaScript",
+        "Manejo de Azure para despliegue y gestión de aplicaciones",
+        "Desarrollo de soluciones web personalizadas",
+        "Integración de servicios en la nube",
+      ],
+      responsibilitiesEn: [
+        "Web development with JavaScript",
+        "Azure management for application deployment and management",
+        "Custom web solutions development",
+        "Cloud services integration",
+      ],
       tags: [
-        { name: "Vtex", icon: "https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg" },
-        { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-        { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
           name: "JavaScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
+        { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+        { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       ],
     },
@@ -181,8 +312,22 @@ export function Experience() {
         "Desarrollo de aplicativos web con WordPress, Manejo de servidores en la nube y físicos Linux y Mantenimiento e instalación de bases de datos",
       descriptionEn:
         "Web application development with WordPress, Cloud and physical Linux server management, and Database maintenance and installation",
+      responsibilities: [
+        "Creación de páginas web con WordPress",
+        "Creación y mantenimiento de bases de datos",
+        "Administración de sistemas operativos Linux",
+        "Gestión de servidores en la nube y físicos",
+      ],
+      responsibilitiesEn: [
+        "Web page creation with WordPress",
+        "Database creation and maintenance",
+        "Linux operating system administration",
+        "Cloud and physical server management",
+      ],
       tags: [
         { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+        { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
         { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         {
@@ -223,6 +368,30 @@ export function Experience() {
                 <p className="text-muted-foreground leading-relaxed font-mono text-sm">
                   {language === "es" ? exp.description : exp.descriptionEn}
                 </p>
+
+                {exp.responsibilities && (
+                  <div className="mt-3">
+                    <button
+                      onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                      className="flex items-center gap-2 text-sm font-mono text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${expandedIndex === index ? "rotate-180" : ""}`}
+                      />
+                      {t("Ver funciones", "View responsibilities")}
+                    </button>
+                    {expandedIndex === index && (
+                      <ul className="mt-3 space-y-2 pl-6">
+                        {(language === "es" ? exp.responsibilities : exp.responsibilitiesEn)?.map((resp, i) => (
+                          <li key={i} className="text-sm font-mono text-muted-foreground list-disc">
+                            {resp}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+
                 <div className="flex flex-wrap gap-2 pt-2">
                   {exp.tags.map((tag) => (
                     <div key={tag.name} className="flex items-center gap-1.5 px-2 py-1 bg-muted rounded">
