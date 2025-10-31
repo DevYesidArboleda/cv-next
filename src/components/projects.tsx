@@ -141,8 +141,8 @@ export function Projects() {
     {
       title: "Autocolombiana",
       company: "Legger",
-      description: "Plataforma de comercio electrónico realizada en vtex",
-      descriptionEn: "E-commerce platform built with vtex",
+      description: "Plataforma de comercio electrónico realizada en vtex ",
+      descriptionEn: "E-commerce platform built with vtex ",
       image: "/autocolombiana.png",
       tags: [
         {
