@@ -1,143 +1,52 @@
 "use client"
 
+import { Gauge, Layers, ServerCog, ShoppingBag } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { profile } from "@/data/profile"
+import { Reveal } from "./reveal"
+import { SectionHeading } from "./section-heading"
+
+const ICONS = [ShoppingBag, Layers, ServerCog, Gauge]
 
 export function About() {
-  const { language, t } = useLanguage()
+  const { t } = useLanguage()
 
   return (
-    <section id="about" className="min-h-screen flex items-center px-6 py-8 md:py-12">
-      <div className="max-w-6xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          <div>
-            <h2 className="text-3xl font-bold text-muted-foreground mb-6 uppercase tracking-wider font-mono">
-              {t("Sobre mí", "About Me")}
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed font-mono text-justify">
-              <p>
-                {t(
-                  "Soy un desarrollador full-stack que encuentra su pasión en la intersección entre el diseño y la ingeniería. Me especializo en traducir visiones de diseño en interfaces de usuario accesibles y pixel-perfect, respaldadas por una arquitectura robusta y de alto rendimiento. Mi objetivo es construir experiencias digitales que no solo sean visualmente impresionantes, sino también funcionales, usables y meticulosamente construidas.",
-                  "I am a full-stack developer who finds passion at the intersection of design and engineering. I specialize in translating design visions into accessible and pixel-perfect user interfaces, backed by robust and high-performance architecture. My goal is to build digital experiences that are not only visually stunning, but also functional, usable, and meticulously crafted.",
-                )}
-              </p>
-              <p>
-                {t(
-                  "Como desarrollador full-stack, mi misión es construir puentes entre el diseño creativo y la solidez técnica. Me apasiona materializar experiencias de usuario que sean visualmente pulcras (pixel-perfect), inclusivas (accesibles) y ofrezcan un rendimiento óptimo. Cada línea de código que escribo tiene como objetivo no solo cumplir con las especificaciones, sino superar las expectativas de usabilidad y funcionalidad.",
-                  "As a full-stack developer, my mission is to build bridges between creative design and technical solidity. I am passionate about materializing user experiences that are visually polished (pixel-perfect), inclusive (accessible), and offer optimal performance. Every line of code I write aims not only to meet specifications, but to exceed usability and functionality expectations.",
-                )}
-              </p>
-            </div>
-            <div className="mt-8 p-6 rounded-lg border border-border bg-gradient-to-br from-cyan-500/5 to-blue-500/5">
-              <img src="/profilepic.png" alt="Developer workspace" className="w-full h-auto rounded-lg" />
-            </div>
-          </div>
+    <section id="about" className="section">
+      <Reveal>
+        <SectionHeading
+          eyebrow={t("Perfil", "Profile")}
+          title={t(
+            "Ingeniería sólida con atención obsesiva al detalle visual.",
+            "Solid engineering with an obsessive eye for visual detail.",
+          )}
+        />
+      </Reveal>
 
-          <div>
-            <h3 className="text-2xl font-mono text-muted-foreground mb-6 uppercase tracking-wider md:text-2xl md:font-bold">
-              {t("Habilidades", "Skills")}
-            </h3>
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-base font-medium mb-3 font-mono">Frontend</h4>
-                <div className="flex flex-wrap gap-3">
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://brand.vtex.com/wp-content/themes/vtex-brand/img/logo.svg"
-                      alt="Vtex"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Vtex</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                      alt="React"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">React</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                      alt="Next.js"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Next.js</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                      alt="TypeScript"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">TypeScript</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                      alt="Tailwind"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Tailwind CSS</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-medium mb-3 font-mono">Backend</h4>
-                <div className="flex flex-wrap gap-3">
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                      alt="Node.js"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Node.js</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                      alt="PostgreSQL"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">PostgreSQL</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <span className="text-sm font-mono">API REST</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-medium mb-3 font-mono">{t("Herramientas", "Tools")}</h4>
-                <div className="flex flex-wrap gap-3">
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                      alt="Git"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Git</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                      alt="Figma"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">Figma</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-muted rounded-md">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                      alt="VS Code"
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm font-mono">VS Code</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="grid gap-12 md:grid-cols-[1.1fr_1fr] md:gap-16">
+        <Reveal className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          {profile.about.map((p, i) => (
+            <p key={i}>{t(p)}</p>
+          ))}
+        </Reveal>
+
+        <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+          {profile.highlights.map((h, i) => {
+            const Icon = ICONS[i % ICONS.length]
+            return (
+              <Reveal
+                as="li"
+                key={h.title.en}
+                delay={i * 80}
+                className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+              >
+                <Icon className="mb-3 size-5 text-primary" aria-hidden />
+                <h3 className="text-sm font-semibold">{t(h.title)}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{t(h.body)}</p>
+              </Reveal>
+            )
+          })}
+        </ul>
       </div>
     </section>
   )

@@ -1,42 +1,57 @@
 "use client"
 
 import type React from "react"
-import { createContext, useContext, useState, useEffect } from "react"
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react"
+import type { Localized } from "@/data/profile"
 
-type Language = "es" | "en"
+export type Language = "es" | "en"
 
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (es: string, en: string) => string
+  /** Accepts either a `{ es, en }` object or two strings. */
+  t: (value: Localized | string, en?: string) => string
 }
+
+const STORAGE_KEY = "language"
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("es")
+  const [language, setLanguageState] = useState<Language>("es")
 
   useEffect(() => {
-    const saved = localStorage.getItem("language") as Language
-    if (saved) {
-      setLanguage(saved)
-    }
+    let initial: Language = "es"
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      if (saved === "es" || saved === "en") initial = saved
+      else if (!navigator.language.toLowerCase().startsWith("es")) initial = "en"
+    } catch {}
+    setLanguageState(initial)
   }, [])
 
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang)
-    localStorage.setItem("language", lang)
-  }
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
-  const t = (es: string, en: string) => {
-    return language === "es" ? es : en
-  }
+  const setLanguage = useCallback((lang: Language) => {
+    setLanguageState(lang)
+    try {
+      localStorage.setItem(STORAGE_KEY, lang)
+    } catch {}
+  }, [])
 
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
-      {children}
-    </LanguageContext.Provider>
+  const t = useCallback(
+    (value: Localized | string, en?: string) => {
+      if (typeof value === "string") return language === "es" ? value : (en ?? value)
+      return value[language]
+    },
+    [language],
   )
+
+  const ctx = useMemo(() => ({ language, setLanguage, t }), [language, setLanguage, t])
+
+  return <LanguageContext.Provider value={ctx}>{children}</LanguageContext.Provider>
 }
 
 export function useLanguage() {

@@ -1,85 +1,54 @@
 "use client"
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { ExternalLink, AlertCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ExternalLink } from "lucide-react"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useLanguage } from "@/contexts/language-context"
+import type { Project } from "@/data/profile"
+import { LivePreview } from "./live-preview"
 
-interface ProjectModalProps {
-  isOpen: boolean
-  onClose: () => void
-  project: {
-    title: string
-    description: string
-    descriptionEn?: string
-    tags: { name: string; icon: string }[]
-    link: string
-    preview: string
-    screenshot: string
-  } | null
-}
-
-export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
-  const { language, t } = useLanguage()
-
-  if (!project) return null
+export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
+  const { t } = useLanguage()
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-5xl h-[90vh] p-0">
-        <DialogHeader className="p-6 pb-4">
-          <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl font-mono">{project.title}</DialogTitle>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-primary hover:underline font-mono"
-            >
-              {t("Visitar sitio", "Visit site")}
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
-          <p className="text-muted-foreground mt-2 font-mono text-sm">
-            {language === "es" ? project.description : project.descriptionEn || project.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mt-3">
-            {project.tags.map((tag) => (
-              <div
-                key={tag.name}
-                className="flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary rounded-full"
-              >
-                <img src={tag.icon || "/placeholder.svg"} alt={tag.name} className="w-4 h-4" />
-                <span className="text-xs font-mono">{tag.name}</span>
-              </div>
-            ))}
-          </div>
-        </DialogHeader>
-        <div className="flex-1 px-6 pb-6">
-          <div className="rounded-lg border border-border overflow-hidden bg-muted h-full flex flex-col items-center justify-center gap-4 p-8">
-            <img
-              src={project.screenshot || "/placeholder.svg"}
-              alt={`${project.title} preview`}
-              className="w-full max-w-3xl rounded-lg border border-border shadow-lg"
-            />
-            <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
-              <AlertCircle className="w-4 h-4" />
-              <p>
+    <Dialog open={project !== null} onOpenChange={(open) => !open && onClose()}>
+      {project && (
+        <DialogContent className="max-h-[94vh] gap-0 overflow-y-auto p-0 sm:max-w-4xl">
+          <LivePreview project={project} variant="modal" className="rounded-t-lg border-b border-border" />
+          <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="space-y-3">
+              <DialogHeader className="text-left">
+                <DialogTitle className="text-2xl font-semibold tracking-tight">{project.title}</DialogTitle>
+                <DialogDescription>
+                  {[project.company, t(project.country)].filter(Boolean).join(" · ")}
+                </DialogDescription>
+              </DialogHeader>
+              <p className="leading-relaxed text-muted-foreground">{t(project.summary)}</p>
+              <ul className="flex flex-wrap gap-1.5">
+                {project.stack.map((s) => (
+                  <li key={s} className="chip">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-muted-foreground">
                 {t(
-                  "La vista previa en vivo no está disponible debido a restricciones de seguridad",
-                  "Live preview is not available due to security restrictions",
+                  "Desplázate dentro de la vista previa · captura real del sitio, actualizada cada 24 h.",
+                  "Scroll inside the preview · a real capture of the site, refreshed every 24 h.",
                 )}
               </p>
             </div>
-            <Button asChild size="lg" className="font-mono">
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                {t("Abrir sitio en nueva pestaña", "Open site in new tab")}
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 shrink-0 items-center gap-2 self-start rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:self-auto"
+            >
+              {t("Visitar sitio", "Visit site")}
+              <ExternalLink className="size-4" aria-hidden />
+            </a>
           </div>
-        </div>
-      </DialogContent>
+        </DialogContent>
+      )}
     </Dialog>
   )
 }

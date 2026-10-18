@@ -1,31 +1,35 @@
+import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { Journey } from "@/components/journey"
 import { About } from "@/components/about"
-import { Services } from "@/components/services"
-import { Technologies } from "@/components/technologies"
 import { Experience } from "@/components/experience"
 import { Projects } from "@/components/projects"
+import { Skills } from "@/components/skills"
 import { Contact } from "@/components/contact"
-import { Navigation } from "@/components/navigation"
-import { WhatsAppButton } from "@/components/whatsapp-button"
-import { AnimatedBackground } from "@/components/animated-background"
-import { BackToTop } from "@/components/back-to-top"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <AnimatedBackground />
-      <Navigation />
-      <main className="relative z-10 lg:pl-64">
+    <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      >
+        Saltar al contenido
+      </a>
+      <SiteHeader />
+      <main id="main">
         <Hero />
-        <About />
-        <Services />
-        <Technologies />
-        <Experience />
-        <Projects />
-        <Contact />
+        <Journey />
+        <div>
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+        </div>
       </main>
-      <WhatsAppButton />
-      <BackToTop />
-    </div>
+      <SiteFooter />
+    </>
   )
 }
