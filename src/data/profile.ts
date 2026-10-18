@@ -61,7 +61,8 @@ export const profile = {
 
 export type Experience = {
   start: string
-  end: string | null
+  /** `null` = current role */
+  end: string | Localized | null
   title: Localized
   company: string
   summary: Localized
@@ -78,7 +79,7 @@ const VTEX_STORE_POINTS: Localized[] = [
 export const experience: Experience[] = [
   {
     start: "2024",
-    end: null,
+    end: { es: "2025", en: "2025" },
     title: { es: "Desarrollador VTEX IO", en: "VTEX IO Developer" },
     company: "Balloon Group",
     summary: {
@@ -398,7 +399,7 @@ export const journey: JourneyStop[] = [
     tags: ["Next.js", "React", "Figma"],
   },
   {
-    year: { es: "Hoy", en: "Today" },
+    year: { es: "2024", en: "2024" },
     where: "Balloon Group",
     title: { es: `+${PROJECT_COUNT} proyectos entregados.`, en: `${PROJECT_COUNT}+ projects delivered.` },
     body: {

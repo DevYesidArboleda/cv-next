@@ -14,7 +14,8 @@ function Role({ item, current }: { item: ExperienceItem; current: boolean }) {
   const { t } = useLanguage()
   const [open, setOpen] = useState(false)
   const panelId = useId()
-  const period = item.end === item.start ? item.start : `${item.start} — ${item.end ?? t("Actualidad", "Present")}`
+  const end = item.end === null ? t("Actualidad", "Present") : t(item.end)
+  const period = end === item.start ? item.start : `${item.start} — ${end}`
 
   return (
     <div className="relative grid gap-2 pb-10 pl-8 md:grid-cols-[9rem_1fr] md:gap-8 md:pl-0">
